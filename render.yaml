@@ -1,8 +1,8 @@
-databases:
-  - name: mysitedb
-    plan: free
-    databaseName: mysite
-    user: mysite
+# databases:
+#   - name: mysitedb
+#     plan: free
+#     databaseName: mysite
+#     user: mysite
 
 services:
   - type: web
@@ -11,10 +11,12 @@ services:
     runtime: python
     buildCommand: './build.sh'
     startCommand: 'python -m gunicorn swiftgo.asgi:application -k uvicorn.workers.UvicornWorker' 
-    envVars:
-      - key: DATABASE_URL
-        value: postgresql://swiftDB_owner:npg_wHbRolum62kr@ep-proud-leaf-a570v1gz-pooler.us-east-2.aws.neon.tech/swiftDB?sslmode=require
-      - key: SECRET_KEY
-        generateValue: true
-      - key: WEB_CONCURRENCY
-        value: 4
+    # envVars:
+    #   - key: DATABASE_URL
+    #     fromDatabase:
+    #       name: mysitedb
+    #       property: connectionString
+    #   - key: SECRET_KEY
+    #     generateValue: true
+    #   - key: WEB_CONCURRENCY
+    #     value: 4
