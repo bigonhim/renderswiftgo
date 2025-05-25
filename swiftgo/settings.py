@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'swiftgo.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 
-DATABASE_URL = os.getenv('DATABASE_URL')
+# DATABASE_URL = os.getenv('DATABASE_URL')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
