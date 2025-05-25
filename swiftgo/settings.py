@@ -85,10 +85,10 @@ WSGI_APPLICATION = 'swiftgo.wsgi.application'
 
 # DATABASE_URL = os.getenv('DATABASE_URL')
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default='postgresql://swiftgo_vf7f_user:gp2druWFeTCuZKA2l6XGMJLlscQ5Uepe@dpg-d0pnd7emcj7s73ebojj0-a/swiftgo_vf7f',
+        conn_max_age=600
+    )
 }
 
 
