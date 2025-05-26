@@ -143,10 +143,6 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
 }
 
-# MEDIA_URL = 'https://res.cloudinary.com/dqodkdghu/media/'
-
-
-
 
 # MEDIA_URL ='/media/'
 # MEDIA_ROOT = os.path.join(BASE_DIR,'media')
